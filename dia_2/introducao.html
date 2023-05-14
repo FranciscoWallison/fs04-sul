@@ -1,0 +1,173 @@
+<!-- As principais tags do HTML são utilizadas para criar a estrutura básica de uma página web e
+para definir o conteúdo da página. A seguir, apresento a estrutura padrão de um documento
+HTML 5 e as principais tags utilizadas no desenvolvimento de uma página web, acompanhadas
+de comentários explicativos. -->
+
+
+<!--
+    Tag de abertura: A tag de abertura é o primeiro elemento do elemento HTML e
+é onde você especifica o nome da tag que está usando. Por exemplo, a tag de
+abertura para um parágrafo é <p>.
+-->
+
+<!-- 
+    Atributos: Os atributos fornecem informações adicionais sobre o elemento HTML e 
+geralmente são especificados dentro da tag de abertura. Por exemplo, um elemento de
+imagem pode ter um atributo src para especificar o caminho para a imagem a ser exibida:
+<img src="caminho/para/imagem.jpg">.
+-->
+
+<!-- 
+    Conteúdo: O conteúdo é o que está contido dentro das tags de abertura e fechamento do
+elemento HTML. Por exemplo, o conteúdo de um parágrafo pode ser uma frase ou um conjunto de palavras.
+-->
+
+<!-- 
+    Tag de fechamento: A tag de fechamento é o último elemento do elemento HTML e é onde você especifica
+o nome da tag que está usando, precedido por uma barra. Por exemplo, a tag de fechamento para um parágrafo é </p>.
+-->
+
+<!-- 
+    Elementos aninhados: Os elementos HTML podem ser aninhados uns dentro dos outros. Por exemplo, você pode ter
+um elemento de lista não ordenada <ul> que contém vários elementos de lista <li> como seus filhos.
+-->
+
+<!--
+    Comentários: Os comentários podem ser adicionados ao código HTML para fins de documentação ou para facilitar 
+    a compreensão do código. Os comentários começam com
+-->
+<!-- e terminam com -->.
+
+<!-- Estrutura padrão de um documento HTML 5: -->
+
+
+<!-- <!DOCTYPE html>: Define a versão do HTML utilizada no documento. No caso, a versão 5. -->
+<!DOCTYPE html>
+<!-- 
+    <html lang="pt-br">:
+        Define o início do documento HTML e o idioma padrão da página. A sigla "pt-br"
+        indica que a linguagem utilizada é o português do Brasil.
+-->
+<html lang="pt-br">
+<!--
+    <head>:
+        Define o cabeçalho da página, onde são incluídas informações como o título da página,
+        metadados e referências a arquivos CSS e JavaScript.
+-->
+  <head>
+<!--
+    <meta charset="UTF-8">:
+        Define o conjunto de caracteres utilizado no documento. O valor
+        "UTF-8" é o conjunto de caracteres mais utilizado atualmente. 
+-->
+    <meta charset="UTF-8">
+<!-- 
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">:
+        Define a escala inicial de visualização da página em dispositivos móveis.
+-->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<!-- 
+    <title>Título da página</title>:
+        Define o título da página, que é exibido na barra de título do navegador.
+-->
+    <title>Título da página</title>
+  </head>
+
+<!--
+    <body>:
+        Define o corpo da página, onde são incluídos todos os elementos que serão exibidos no conteúdo da página. 
+-->
+  <body>
+
+    <!-- <h1> a <h6> - Títulos e subtítulos: -->
+    <h1>Título principal</h1>
+    <h2>Subtítulo</h2>
+    <h3>Sub-subtítulo</h3>
+    <!-- <p> - Parágrafo:  -->
+    <p>Este é um parágrafo.</p>
+    <!-- <a> - Link: -->
+    <a href="https://www.exemplo.com.br">Link para o site exemplo</a>
+    <!-- <img> - Imagem: -->
+    <img src="imagem.jpg" alt="Descrição da imagem">
+    <!-- <ul> e <li> - Lista não ordenada: -->
+    <ul>
+        <li>Item 1</li>
+        <li>Item 2</li>
+        <li>Item 3</li>
+    </ul>
+    <!-- <ol> e <li> - Lista ordenada: -->
+    <ol>
+        <li>Item 1</li>
+        <li>Item 2</li>
+        <li>Item 3</li>
+    </ol>
+    <!-- Tabela: -->
+    <!-- <table>: Define uma tabela HTML. -->
+    <table> 
+        <!-- <thead>: Define a seção de cabeçalho da tabela. Esta seção geralmente contém as células
+            que descrevem o conteúdo de cada coluna. -->
+        <thead>
+            <!-- <tr>: Define uma linha na tabela. -->
+            <tr>
+                <!-- <th>: Define uma célula de cabeçalho da tabela. Esta célula é usada para descrever o
+                    conteúdo de uma coluna.
+                    Por padrão, o texto em células <th> é exibido em negrito e centralizado.
+                -->
+                <th>País</th>
+                <th>Estado</th>
+                <th>Capital</th>
+            </tr>
+        </thead>
+        <!-- <tbody>: Define a seção principal do corpo da tabela. Esta seção geralmente contém as
+            células que exibem o conteúdo da tabela. -->
+        <tbody>
+            <tr>
+                <!-- <td>: Define uma célula de dados na tabela. Esta célula é usada para exibir o conteúdo real da tabela. -->
+                <td>Brasil</td>
+                <td>Rio de Janeiro</td>
+                <td>Rio de Janeiro</td>
+            </tr>
+            <tr>
+                <td>Brasil</td>
+                <td>São Paulo</td>
+                <td>São Paulo</td>
+            </tr>
+            <tr>
+                <td>Brasil</td>
+                <td>Minas Gerais</td>
+                <td>Belo Horizonte</td>
+            </tr>
+                <tr>
+                <td>Brasil</td>
+                <td>Acre</td>
+                <td>Rio Branco</td>
+            </tr>
+        </tbody>
+    </table>
+
+    <!-- <form>, <input>, <textarea> e <button> - Formulário:  -->
+    <form>
+        <label for="nome">Nome:</label>
+        <input type="text" id="nome" name="nome"><br>
+        
+        <label for="email">E-mail:</label>
+        <input type="email" id="email" name="email"><br>
+        
+        <label for="mensagem">Mensagem:</label>
+        <textarea id="mensagem" name="mensagem"></textarea><br>
+        
+        <button type="submit">Enviar</button>
+    </form>
+    <!-- <div> - Divisão de conteúdo:  -->
+    <div>
+        Conteúdo da primeira divisão.
+    </div>
+    <!-- <span> - Marcação de texto: -->
+    <p>O preço é de R$ <span>10,00</span> por unidade.</p>
+    <!-- <br> - Quebra de linha: -->
+    <p>Linha 1<br>Linha 2</p>
+    <!-- <hr> - Linha horizontal: -->
+    <hr>
+
+  </body>
+</html>
