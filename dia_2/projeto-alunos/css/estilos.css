@@ -1,3 +1,22 @@
+/* font-size: 1.2em;: O valor em é relativo ao tamanho da fonte do elemento pai. Nesse caso, 1.2em aumentará o tamanho da fonte em 20% em 
+relação ao tamanho da fonte do elemento pai.
+
+font-size: x-small;: É uma palavra-chave que representa um tamanho de fonte pré-definido. x-small é um dos valores de tamanho mais pequenos
+ disponíveis.
+
+font-size: smaller;: Também é uma palavra-chave pré-definida. O valor smaller diminuirá o tamanho da fonte em relação ao tamanho padrão do
+ navegador ou ao tamanho definido no elemento pai.
+
+font-size: 12px;: Aqui, o tamanho da fonte é especificado em pixels. O valor 12px definirá o tamanho da fonte para 12 pixels.
+
+font-size: 80%;: O valor 80% especifica o tamanho da fonte como uma porcentagem do tamanho da fonte padrão do navegador ou do tamanho definido
+
+no elemento pai. Nesse caso, a fonte será reduzida para 80% do tamanho padrão.
+
+É importante mencionar que o uso de unidades de tamanho relativas, como em e %, torna o design responsivo mais flexível, pois as fontes 
+se adaptam ao tamanho do elemento pai ou do viewport. Já o uso de unidades absolutas,
+como px, fixa o tamanho da fonte, o que pode afetar a adaptabilidade em diferentes dispositivos e tamanhos de tela. */
+
 /* 
     Nomes dos aquivos
         - Devem conter apenas letras minúsculas de "a" a "z";
@@ -41,11 +60,47 @@ body {
 }
 
 
-/* Identificador ele só pode ser usado uma unica vez  */
 
 /* Seletores universais */
 
+/* Seletores universais  */
 * {
     margin: 0;
     padding: 0;
 }
+
+
+/* Seletores por atributo */
+
+/* <a> elementos com um atributo de título  */
+a[title] {
+ color: purple;
+}
+
+/* <a> elementos combinando com um href "https://exemplo.org" */
+a[href="https://exemplo.org"] {
+ color: green;
+}
+
+/* <a> elementos com um href contendo "example2" */
+a[href*="example2"] {
+ font-size: 2em;
+}
+
+/* <a> elementos com href terminando em ".org" */
+a[href$=".br"] {
+ font-style: italic;
+}
+
+/* Seletores filho  */
+
+div > strong { color:#f00; }
+
+
+/* Seletores irmãos adjacentes */
+
+p + p { color:#f00; }
+
+
+/* Identificador ele só pode ser usado uma unica vez  */
+
