@@ -14,7 +14,12 @@ abertura para um parágrafo é <p>.
     Atributos: Os atributos fornecem informações adicionais sobre o elemento HTML e 
 geralmente são especificados dentro da tag de abertura. Por exemplo, um elemento de
 imagem pode ter um atributo src para especificar o caminho para a imagem a ser exibida:
-<img src="caminho/para/imagem.jpg">.
+
+    <a href="https://www.exemplo.com.br">Link para o site exemplo</a>
+    <img src="caminho/para/imagem.jpg"/>.
+    <input type="text" name="" value="" required>
+    <p onclick="minhaFuncao()"> Fecha mento </p>
+
 -->
 
 <!-- 
@@ -41,24 +46,52 @@ um elemento de lista não ordenada <ul> que contém vários elementos de lista <
 <!-- Estrutura padrão de um documento HTML 5: -->
 
 
-<!-- <!DOCTYPE html>: Define a versão do HTML utilizada no documento. No caso, a versão 5. -->
+<!-- <!DOCTYPE html>: 
+    - Indica que o documento é um arquivo HTML.
+    - Define a versão do HTML utilizada no documento. No caso, a versão 5.
+-->
 <!DOCTYPE html>
 <!-- 
+    HTML: 
+        - Representa todo o documento
     <html lang="pt-br">:
+        lang:
+            - language codes + ( códigos de país - Country Codes)
+                - https://www.w3schools.com/tags/ref_language_codes.asp
+                - https://www.w3schools.com/tags/ref_country_codes.asp
+         - O atributo lang representa a linguagem do conteúdo da página
+         - Espanhol             = lang="es"
+         - Francês              = lang="fr"
+         - Inglês               = lang="en"
+         - Inglês Britânico     = lang="en-GB"
         Define o início do documento HTML e o idioma padrão da página. A sigla "pt-br"
         indica que a linguagem utilizada é o português do Brasil.
 -->
 <html lang="pt-br">
 <!--
     <head>:
-        Define o cabeçalho da página, onde são incluídas informações como o título da página,
+        - Informações sobre a página.
+        - Define o cabeçalho da página, onde são incluídas informações como o título da página,
         metadados e referências a arquivos CSS e JavaScript.
 -->
   <head>
 <!--
-    <meta charset="UTF-8">:
-        Define o conjunto de caracteres utilizado no documento. O valor
-        "UTF-8" é o conjunto de caracteres mais utilizado atualmente. 
+    TAG <meta>
+     - Define as informações.
+     - Search Engine Optimization SEO: É chamado de especialista em otimização de mecanismos de busca
+        <meta charset="UTF-8"> : 
+            - Conjunto de caracteres;
+        - Descrição da página;
+        - Palavras chaves;
+        - Autor do documento;
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+            - Essa metatag é usada para especificar a versão do Internet Explorer (IE)
+            que o navegador deve usar para exibir a página da web
+        <meta name="viewport" content="width=device-width, inicial-scale=1.0">:
+            - Configuração de janela de visualização;
+        <meta charset="UTF-8">:
+            - Define o conjunto de caracteres utilizado no documento. O valor
+            "UTF-8" é o conjunto de caracteres mais utilizado atualmente. 
 -->
     <meta charset="UTF-8">
 <!-- 
@@ -67,7 +100,8 @@ um elemento de lista não ordenada <ul> que contém vários elementos de lista <
 -->
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <!-- 
-    <title>Título da página</title>:
+    <title>:
+        - Título na aba do navegador.
         Define o título da página, que é exibido na barra de título do navegador.
 -->
     <title>Título da página</title>
@@ -75,7 +109,8 @@ um elemento de lista não ordenada <ul> que contém vários elementos de lista <
 
 <!--
     <body>:
-        Define o corpo da página, onde são incluídos todos os elementos que serão exibidos no conteúdo da página. 
+        - Conteúdo apresentado ao visitante.
+        - Define o corpo da página, onde são incluídos todos os elementos que serão exibidos no conteúdo da página. 
 -->
   <body>
 
@@ -89,6 +124,34 @@ um elemento de lista não ordenada <ul> que contém vários elementos de lista <
     <a href="https://www.exemplo.com.br">Link para o site exemplo</a>
     <!-- <img> - Imagem: -->
     <img src="imagem.jpg" alt="Descrição da imagem">
+
+    <!--
+        ul:
+            - (unordered list) é usada para definir uma lista não ordenada.
+
+    -->
+    <ul>
+        <!-- 
+            li:
+             - Ela contém uma ou mais tags <li> (list item), que representam cada item da lista
+         -->
+        <li>Item 1</li>
+        <li>Item 2</li>
+        <li>Item 3</li>
+    </ul>
+    <!-- outro exemplo  -->
+    <hr>
+    <ul>
+        <li>Item 1</li>
+        <li>Item 2
+          <ul>
+            <li>Item 2.1</li>
+            <li>Item 2.2</li>
+          </ul>
+        </li>
+        <li>Item 3</li>
+    </ul>
+
     <!-- <ul> e <li> - Lista não ordenada: -->
     <ul>
         <li>Item 1</li>
@@ -101,11 +164,15 @@ um elemento de lista não ordenada <ul> que contém vários elementos de lista <
         <li>Item 2</li>
         <li>Item 3</li>
     </ol>
+
+
     <!-- Tabela: -->
     <!-- <table>: Define uma tabela HTML. -->
     <table> 
-        <!-- <thead>: Define a seção de cabeçalho da tabela. Esta seção geralmente contém as células
-            que descrevem o conteúdo de cada coluna. -->
+        <!-- 
+            <thead>: Define a seção de cabeçalho da tabela. Esta seção geralmente contém as células
+            que descrevem o conteúdo de cada coluna.
+        -->
         <thead>
             <!-- <tr>: Define uma linha na tabela. -->
             <tr>
@@ -118,11 +185,15 @@ um elemento de lista não ordenada <ul> que contém vários elementos de lista <
                 <th>Capital</th>
             </tr>
         </thead>
-        <!-- <tbody>: Define a seção principal do corpo da tabela. Esta seção geralmente contém as
-            células que exibem o conteúdo da tabela. -->
+        <!-- 
+            <tbody>: Define a seção principal do corpo da tabela. Esta seção geralmente contém as
+            células que exibem o conteúdo da tabela.
+        -->
         <tbody>
             <tr>
-                <!-- <td>: Define uma célula de dados na tabela. Esta célula é usada para exibir o conteúdo real da tabela. -->
+                <!-- 
+                    <td>: Define uma célula de dados na tabela. Esta célula é usada para exibir o conteúdo real da tabela.
+                -->
                 <td>Brasil</td>
                 <td>Rio de Janeiro</td>
                 <td>Rio de Janeiro</td>
@@ -147,17 +218,69 @@ um elemento de lista não ordenada <ul> que contém vários elementos de lista <
 
     <!-- <form>, <input>, <textarea> e <button> - Formulário:  -->
     <form>
+        <!-- falar -->
         <label for="nome">Nome:</label>
+        <!-- falar -->
         <input type="text" id="nome" name="nome"><br>
         
         <label for="email">E-mail:</label>
         <input type="email" id="email" name="email"><br>
         
         <label for="mensagem">Mensagem:</label>
-        <textarea id="mensagem" name="mensagem"></textarea><br>
-        
+        <textarea id="mensagem" name="mensagem"></textarea>
+        <br>
         <button type="submit">Enviar</button>
     </form>
+
+    <!-- Enviando para o navegador -->
+    <!-- https://wa.me/5548999999999?text=Eu%20quero%20fazer%20um%20pedido -->
+    <!-- action="/action_page.php" -->
+    <!-- +5585989286298 -->
+    <form target="/search">
+        <label for="bairro">bairro:</label>
+        <input id="bairro" name="bairro" type="search" placeholder="bairro" required  oninvalid="this.setCustomValidity('Por favor, preencha o campo bairro.')"/>  <br>
+        <br>
+        <!-- borda -->
+        <p>Escolha a borda</p>
+        <input type="radio" id="Cheddar" name="fav_language" value="Cheddar">
+        <label for="Cheddar">Cheddar</label><br>
+        <input type="radio" id="Catupiry" name="fav_language" value="Catupiry">
+        <label for="Catupiry">Catupiry</label><br>
+        <input type="radio" id="Chocolate" name="fav_language" value="Chocolate">
+        <label for="Chocolate">Chocolate</label>
+        <br>
+        <!-- select -->
+        <label for="cars">Sabor:</label>
+        <select name="cars" id="cars">
+            <option value="4queijo">4queijo</option>
+            <option value="marguerita">marguerita</option>
+            <option value="portuguesa">portuguesa</option>
+            <option value="audi">Audi</option>
+        </select>
+
+        <p>Adicionais</p>
+        <input type="checkbox" name="adicional1" value="queijo">
+        <label for="adicional1">  queijo </label><br>
+        <input type="checkbox" name="adiciona2" value="milho">
+        <label for="adiciona2"> milho </label><br>
+        <input type="checkbox" name="adiciona3" value="tomate" checked>
+        <label for="adiciona3">  tomate</label><br><br>
+        <input type="submit" value="Submit">
+        <br>
+
+        <input type="submit" />
+    </form>
+
+    <hr>
+    <form  action="https://wa.me/5585989286298">
+        <label for="text">Mensagem:</label>
+        <textarea id="text" name="text"></textarea>
+
+        <br>
+        <input type="submit" />
+    </form>
+    <hr>
+
     <!-- <div> - Divisão de conteúdo:  -->
     <div>
         Conteúdo da primeira divisão.
@@ -168,6 +291,8 @@ um elemento de lista não ordenada <ul> que contém vários elementos de lista <
     <p>Linha 1<br>Linha 2</p>
     <!-- <hr> - Linha horizontal: -->
     <hr>
+
+
 
   </body>
 </html>

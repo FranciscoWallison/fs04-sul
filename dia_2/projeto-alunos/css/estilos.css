@@ -1,0 +1,51 @@
+/* 
+    Nomes dos aquivos
+        - Devem conter apenas letras minúsculas de "a" a "z";
+        - Números de 0 a 9;
+        - Sublinhado ( Underline ) "_" documentos_pj.css
+        - Hífen "-" documentos-pf.css
+*/
+
+/* 3 : Atribuindo o nome da tag's  */
+p {
+    font-weight: bold;
+}
+
+/*  2 : A propriedade da classe class="minha-primeira-class" */
+.minha-primeira-class {
+    text-align: center;
+}
+
+/* 1 : A propriedade do tipo id ou Identificador único id="minha-primeira-id" */
+#meu-primeiro-id {
+    font-style: italic;
+}
+
+/* Hierarquia */
+
+/* Direto no corpo  com o atribuindo: style="background: black;" */
+
+/* 1: id */
+#body-id {
+    background-color: grey;
+}
+
+/* 2: class */
+.body-class {
+    background-color: red;
+}
+
+/* 3: tag */
+body {
+    background-color: blue;
+}
+
+
+/* Identificador ele só pode ser usado uma unica vez  */
+
+/* Seletores universais */
+
+* {
+    margin: 0;
+    padding: 0;
+}
