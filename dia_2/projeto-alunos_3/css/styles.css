@@ -1,0 +1,45 @@
+body {
+    display: flex;
+    justify-content: center;
+    /* 
+            Será definida como 50% da altura total da janela do navegador.
+        Isso fará com que o elemento ocupe metade da
+        altura da janela, independentemente do tamanho da janela do navegador.
+    */
+    height: 100vh;
+    margin: 0;
+    /* background-color: #f4f4f4; */
+    background-image: url("../paraquedismo.jpg");
+    /* para não repetir */
+    background-repeat: no-repeat;
+    /*
+        Para cobrir completamente o elemento ao qual    
+    está sendo aplicada, sem distorção da proporção original da imagem.
+    */
+    background-size: cover;
+  }
+  
+  .container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .card {
+    background-color: #000;
+    color: #fff;
+    padding: 20px;
+    text-align: center;
+  }
+  
+  h1 {
+    margin-top: 0;
+  }
+  
+  a {
+    padding: 10px 20px;
+    background-color: #fff;
+    color: #000;
+    border-radius: 5px;
+  }
+  

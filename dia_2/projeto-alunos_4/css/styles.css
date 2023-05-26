@@ -1,0 +1,72 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+  }
+  
+  nav {
+    background-color: #333;
+    color: #fff;
+    padding: 10px;
+  }
+  
+  nav ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+  }
+  
+  nav ul li {
+    display: inline;
+    margin-right: 10px;
+  }
+  
+  nav ul li a {
+    color: #fff;
+    text-decoration: none;
+  }
+  
+  header {
+    background-color: #f2f2f2;
+    padding: 20px;
+    margin-top: 10px;
+    /* margin: 10px; */
+  }
+  
+  .content-wrapper {
+    display: flex;
+  }
+  
+  aside {
+    flex: 1;
+    background-color: #eee;
+    padding: 10px;
+    margin: 10px;
+  }
+  
+  footer {
+    background-color: #333;
+    color: #fff;
+    padding: 10px;
+    text-align: center;
+
+    /* 
+        O atributo position: fixed é uma propriedade CSS utilizada para posicionar
+        um elemento de forma fixa em relação
+        à janela de visualização do navegador, independentemente do scroll (rolagem) da página.
+    */
+    position: fixed;
+    /* 
+        O left: 0 e bottom: 0 posicionam o rodapé no canto inferior esquerdo da janela do navegador.
+    */
+    left: 0;
+    bottom: 0;
+    /* 
+        O width: 100% garante que o rodapé ocupe toda a largura disponível
+    */
+    width: 100%;
+  }
+  aside {
+    background-color: #eee;
+    padding: 10px;
+  }

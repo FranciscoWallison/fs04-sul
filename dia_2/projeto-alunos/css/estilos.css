@@ -101,6 +101,17 @@ div > strong { color:#f00; }
 
 p + p { color:#f00; }
 
+/* Metricas */
+#pai {
+    /* 
+    'px': Essa unidade de medida é absoluta e
+        representa pixels. Um pixel é a menor unidade de medida em um display
+        Por exemplo:
+    */
+    font-size: 16px;
+}
 
-/* Identificador ele só pode ser usado uma unica vez  */
-
+#filho {
+    /* O tamanho da fonte será 1.5 vezes o tamanho da fonte do elemento pai */
+    font-size: 1.2em;
+}
