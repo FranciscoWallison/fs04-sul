@@ -1,0 +1,28 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+  }
+  
+  .container {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 20px;
+  }
+  
+  h1 {
+    text-align: center;
+  }
+  
+  .media-player {
+    margin-bottom: 30px;
+  }
+  
+  video, audio {
+    width: 100%;
+  }
+  
+  h2 {
+    margin-bottom: 10px;
+  }
+  
