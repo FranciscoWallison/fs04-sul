@@ -1,0 +1,20 @@
+/* utilizando estilo dentro de um aquivo css */
+body {
+    /* utilizando background para por uma imagem */
+    /* background-image: url('https://blog.portoseguro.com.br/_next/image?url=https%3A%2F%2Fblog.portoseguro.com.br%2Fwordpress%2Fwp-content%2Fuploads%2F2022%2F12%2Fpraia-paradisiaca-na-bahia.jpg&w=1920&q=75') */
+    /* utilizando cores */
+    background-color: black;
+}
+
+/* Utilizando atributo class */
+.minha-primeira-class {
+    /* hexadecimal */
+    color: #32b355;
+}
+
+/* Adicionando id indentificado unico */
+#meu-primeiro-id {
+    /* RGB Colors */
+    color: rgb(91, 190, 71);
+}
+
