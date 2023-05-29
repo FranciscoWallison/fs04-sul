@@ -3,7 +3,7 @@ body {
     /* utilizando background para por uma imagem */
     /* background-image: url('https://blog.portoseguro.com.br/_next/image?url=https%3A%2F%2Fblog.portoseguro.com.br%2Fwordpress%2Fwp-content%2Fuploads%2F2022%2F12%2Fpraia-paradisiaca-na-bahia.jpg&w=1920&q=75') */
     /* utilizando cores */
-    background-color: black;
+    background-color: #fff;
 }
 
 /* Utilizando atributo class */
@@ -18,3 +18,42 @@ body {
     color: rgb(91, 190, 71);
 }
 
+/* Seletor Universal */
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+/* 
+    seleciona todas as tag's com o atributo 
+    que tenha title
+*/
+a[title] {
+    color: red;
+}
+
+/* 
+    Pega a tag's que tenha:
+
+    href="https://google.com"
+*/
+a[href="htts://google.com"]{
+    color: blue;
+    font-size: 2em;
+}
+
+/* 
+    Pega todos que tenha no haref o ".br"
+*/
+a[href*=".br"]
+{
+    color: green;
+    font-family:'Courier New', Courier, monospace;
+}
+
+ul > li[title]
+{
+    color: orange;
+    font-size: 20px;
+}

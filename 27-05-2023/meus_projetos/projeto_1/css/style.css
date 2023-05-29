@@ -1,0 +1,40 @@
+body {
+    /* configurações da imagem */
+    background-image: url('https://www.paraquedismoskycompany.com.br/wp-content/uploads/2019/09/paraquedismo.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+/* 
+    Class que tem responsabilidade de controlar o conteúdo
+*/
+.container {
+    /* troca todas as cores de texto */
+    color: white;
+    /* cria um espaço */
+    padding: 80px;
+}
+/* 
+    Carde do centro para conter as informações
+*/
+.card {
+    background-color: black;
+    border-radius: 15px;
+    text-align: center;
+    /* cria um espaço */
+    padding: 20px;
+}
+
+/* 
+    É um botão para abrir o zap
+*/
+a {
+    /* cria um espaço */
+    padding: 15px;
+    /* adiciona a cor ao espaço */
+    background-color: white;
+    /* deixa a borda arredondada */
+    border-radius: 15px;
+    /* muda a cor do texto */
+    color: black;
+}
