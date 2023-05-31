@@ -64,10 +64,6 @@ video.fullscreen {
   opacity: 0.5;
 }
 
-video.fullscreen::-webkit-media-controls {
-  display: none !important;
-}
-
 .veideo {
   position: relative;
   display: grid;
