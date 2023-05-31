@@ -1,49 +1,118 @@
 body {
-    font-family: Arial, sans-serif;
-    margin: 0;
-    padding: 0;
-  }
-  
-  .container {
-    max-width: 800px;
-    margin: 0 auto;
-    padding: 20px;
-  }
-  
-  h1 {
-    font-family: "Amethysta", Arial;
-    text-align: center;
-  }
-  
-  .media-player {
-    margin-bottom: 30px;
-  }
-  
-  video, audio {
-    width: 100%;
-  }
-  
-  h2 {
-    margin-bottom: 10px;
-  }
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+}
+
+.container {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+h1 {
+  font-family: "Amethysta", Arial;
+  text-align: center;
+}
+
+.midia {
+  margin-bottom: 30px;
+}
+
+.midia > h2 {
+  text-transform: uppercase;
+} 
+
+video, audio {
+  width: 100%;
+}
+
+h2 {
+  margin-bottom: 10px;
+}
   
 
-  header {
-    background-color: #333;
-    color: #fff;
-    padding: 20px;
-    text-align: center;
-  }
+header {
+  background-color: #333;
+  color: #fff;
+  padding: 20px;
+  text-align: center;
+}
 
-  nav {
-    background-color: #555;
-    color: #fff;
-    padding: 10px;
-    text-align: center;
-  }
+nav {
+  background-color: #555;
+  color: #fff;
+  padding: 10px;
+  text-align: center;
+}
 
-  nav a {
-    color: #fff;
-    text-decoration: none;
-    margin: 10px;
-  }
+nav a {
+  color: #fff;
+  text-decoration: none;
+  margin: 10px;
+}
+  
+video.fullscreen {
+  position: absolute;
+  z-index: 0;
+  object-fit: cover;
+  width: 100%;
+  height: 100%;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  opacity: 0.5;
+}
+
+video.fullscreen::-webkit-media-controls {
+  display: none !important;
+}
+
+.veideo {
+  position: relative;
+  display: grid;
+  place-items: center;
+  background: #ccc;
+  padding: 1%;
+}
+
+.mini-bio {
+  z-index: 1;
+  text-align: center;
+}
+
+.mini-bio > h2 {
+  font-size: 354%;
+  font-family: "Amethysta", Arial;
+  z-index: 1;
+}
+
+.mini-bio > p {
+  font-size: 100%;
+  font-family: "Amethysta", Arial;
+  z-index: 1;
+}
+
+
+.contato > .container > a > img {
+  width: 20px;
+}
+
+.sobre {
+  background-color: #333;
+  color: #fff;
+}
+
+
+footer {
+  background-color: #333;
+  color: #fff;
+  padding: 20px;
+  text-align: center;
+}
+
+footer a {
+  color: #fff;
+  text-decoration: none;
+  margin: 10px;
+}
