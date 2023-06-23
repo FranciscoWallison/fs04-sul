@@ -2,6 +2,10 @@ Inicia um novo repositório Git local na pasta atual.
 ````
 git init: 
 ````
+Baixa todas as branches no repositório remoto 
+````
+git fetch origin
+````
 Cria uma cópia local de um repositório remoto.
 ````
 git clone <URL>: 
