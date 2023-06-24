@@ -1,3 +1,10 @@
+:root {
+    --blue: #1e90ff;
+    --white: #f1f1f1;
+    --segundaria: #333;
+  }
+
+
 /* Estilos globais */
 body {
 	font-family: Arial, sans-serif;
@@ -22,7 +29,7 @@ header {
 	align-items: center;
 	justify-content: space-between;
 	padding: 20px;
-	background-color: #f1f1f1;
+	background-color:  var(--white);;
 }
 .logo {
     flex: 1;
@@ -44,7 +51,7 @@ nav li {
 
 nav a {
 	text-decoration: none;
-	color: #333;
+	color: var(--segundaria);
 }
 
 /* Estilos das seções */
@@ -86,7 +93,7 @@ h2 {
 /* Quem Sou */
 .quem-somos {
     background-color: black;
-    color: white;
+    color: var(--white);
 }
 
 .image-simple{
@@ -114,8 +121,8 @@ h2 {
 
 /* Estilos da seção de projetos */
 .projetos{
-    background-color: black;
-    color: white;
+    background-color: var(--segundaria);
+    color: var(--white);
 }
 
 .project-images {
@@ -134,7 +141,7 @@ h2 {
 
 /* Estilos da seção de contatos */
 .contatos {
-    background-color: #f1f1f1;
+    background-color: var(--white);
 }
 
 .contact-block {
@@ -163,8 +170,8 @@ h2 {
 }
 
 footer {
-    background-color: black;
-    color: white;
+    background-color: var(--segundaria);
+    color: var(--white);
     padding: 10px;
     text-align: center;
 }

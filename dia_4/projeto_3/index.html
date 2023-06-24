@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .container {
+            display: flex;
+            justify-content: center;
+        }
+
+        .item {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            padding: 20px;
+            background-color: #f1f1f1;
+            margin: 10px;
+        }
+
+        .sub-item {
+            padding: 10px;
+            background-color: #ddd;
+            margin: 5px;
+        }
+
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <div class="item">Item 1</div>
+        <div class="item">
+          <div class="sub-item">Subitem 1</div>
+          <div class="sub-item">Subitem 2</div>
+        </div>
+        <div class="item">Item 3</div>
+    </div>
+
+</body>
+</html>
