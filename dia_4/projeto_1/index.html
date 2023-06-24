@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+	<meta charset="utf-8"/>
+	<meta content="width=device-width, initial-scale=1, maximum-scale=1" name="viewport">
+	<title>Flexbox - Layout Modelo 2</title>
+	<style type="text/css" media="screen">
+
+		/*
+			A medição de viewport no CSS é usada para definir as dimensões de
+			um elemento com base no tamanho da janela do navegador (viewport).
+			A unidade de medida "vh" significa "viewport height" (altura da viewport) e
+			representa uma porcentagem da altura total da janela do navegador.
+		*/
+
+
+
+	 	 /* Define que todos os elementos devem usar o modelo de caixa de borda (incluindo padding e border) */
+		 * {
+		    box-sizing: border-box; 
+		  }
+		  /* Define o corpo (body) como um contêiner flex */
+		  body {
+		    display: flex;
+		    min-height: 100vh; /* Define a altura mínima do corpo como 100% da altura da viewport */
+		    flex-direction: row; /* Define a direção dos elementos filhos como uma linha horizontal */
+		    margin: 0; /* Remove as margens padrão do corpo */
+		  }
+		  /* Estiliza a coluna 1 */
+		  .col-1 {
+		    background: #69c7c4; /* Define a cor de fundo da coluna 1 */
+		    flex: 1; /* Faz com que a coluna 1 ocupe uma proporção flexível do espaço disponível */
+		  }
+		  /* Estiliza a coluna 2 */
+		  .col-2 {
+		    display: flex; /* Faz com que a coluna 2 seja um contêiner flex */
+		    flex-direction: column; /* Define a direção dos elementos filhos como uma coluna vertical */
+		    flex: 5; /* Faz com que a coluna 2 ocupe 5 vezes mais espaço que a coluna 1 */
+		  }
+		  /* Estiliza o conteúdo dentro da coluna 2 */
+		  .content {
+		    display: flex; /* Faz com que o conteúdo seja um contêiner flex */
+		    flex-direction: row; /* Define a direção dos elementos filhos como uma linha horizontal */
+		  }
+		  /* Estiliza o elemento <article> dentro do conteúdo */
+		  .content > article {
+		    flex: 4; /* Faz com que o elemento <article> ocupe 4 vezes mais espaço que a navegação */
+		    min-height: 60vh; /* Define a altura mínima do elemento <article> como 60% da altura da viewport */
+		  }
+		  /* Estiliza o cabeçalho, rodapé, artigo e navegação */
+		  header, footer {
+		    background: #1b9a96; /* Define a cor de fundo do cabeçalho e rodapé */
+		    height: 20vh; /* Define a altura do cabeçalho e rodapé como 20% da altura da viewport */
+		  }
+		  header, footer, article, nav {
+		    padding: 1em; /* Adiciona um preenchimento de 1em aos cabeçalhos, rodapé, artigo e navegação */
+		  }
+	</style>
+</head>
+
+<body>
+	
+  <nav class="col-1">Navegação</nav>
+
+  <div class="col-2">
+
+  	<header>Cabeçalho</header>
+
+    <main class="content">
+    	<article>Conteúdo</article>
+    </main>
+
+  	<footer>Rodapé</footer>
+  </div>
+</body>
