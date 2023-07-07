@@ -17,3 +17,10 @@ npm i bootstrap@5.3.0
 
 
 #### Exemplos
+Largura da tela: Npx
+
+text-center
+
+text-xl-start
+
+text-md-end
