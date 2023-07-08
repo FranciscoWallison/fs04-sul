@@ -1,6 +1,6 @@
 Inicia um novo repositório Git local na pasta atual.
 ````
-git init: 
+git init
 ````
 Baixa todas as branches no repositório remoto 
 ````
