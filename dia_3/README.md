@@ -68,7 +68,7 @@ git log --follow <arquivo>
 ````
 Mostra historico de commit de um arquivo em todas as branch's
 ````
-git log --follow --all arquivo
+git log --follow --all <arquivo>
 ````
 
 ## Dinâmica  de trabalho
