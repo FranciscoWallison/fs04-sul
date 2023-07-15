@@ -58,6 +58,10 @@ Mostra as diferenças entre o estado atual do repositório e a última versão c
 ````
 git diff: 
 ````
+Removendo tudo da stage area
+````
+git restore --staged <nome_pasta>/*
+````
 
 ## Dinâmica  de trabalho
 ````
