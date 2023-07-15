@@ -1,6 +1,6 @@
 Inicia um novo repositório Git local na pasta atual.
 ````
-git init: 
+git init
 ````
 Baixa todas as branches no repositório remoto 
 ````
@@ -8,55 +8,67 @@ git fetch origin
 ````
 Cria uma cópia local de um repositório remoto.
 ````
-git clone <URL>: 
+git clone <URL>
 ````
 Adiciona um arquivo específico ao índice (staging area) para ser commitado posteriormente.
 ````
-git add <arquivo>: 
+git add <arquivo>
 ````
 Adiciona todas as alterações realizadas na pasta atual ao índice (staging area).
 ````
-git add . ou git add --all: 
+git add . ou git add --all
 ````
 Cria um novo commit com as alterações adicionadas ao índice.
 ````
-git commit -m "mensagem do commit": 
+git commit -m "mensagem do commit"
 ````
 Exibe o status atual do repositório, mostrando quais arquivos foram modificados, adicionados ou removidos.
 ````
-git status: 
+git status
 ````
 Envia os commits locais para um repositório remoto.
 ````
-git push: 
+git push
 ````
 Obtém as atualizações mais recentes de um repositório remoto e mescla com o branch local atual.
 ````
-git pull: 
+git pull
 ````
 Lista todos os branches locais presentes no repositório.
 ````
-git branch: 
+git branch
 ````
 Cria um novo branch com o nome especificado.
 ````
-git branch <nome_branch>: 
+git branch <nome_branch>
 ````
 Muda para o branch especificado.
 ````
-git checkout <nome_branch>: 
+git checkout <nome_branch>
 ````
 Mescla as alterações do branch especificado com o branch atual.
 ````
-git merge <nome_branch>: 
+git merge <nome_branch>
 ````
 Exibe um histórico dos commits realizados no repositório.
 ````
-git log: 
+git log
 ````
 Mostra as diferenças entre o estado atual do repositório e a última versão confirmada
 ````
-git diff: 
+git diff
+````
+Mostra historico de commit da branch
+````
+git log
+````
+Mostra historico de commit de um arquivo da branch
+````
+git log --follow <arquivo>
+````
+Mostra historico de commit de um arquivo em todas as branch's
+````
+git log --follow --all <arquivo>
 ````
 Removendo tudo da stage area
 ````
