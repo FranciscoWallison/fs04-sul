@@ -1,0 +1,177 @@
+:root {
+    --blue: #1e90ff;
+    --white: #f1f1f1;
+    --segundaria: #333;
+  }
+
+
+/* Estilos globais */
+body {
+	font-family: Arial, sans-serif;
+	margin: 0;
+	padding: 0;
+}
+
+ul {
+	list-style: none;
+	margin: 0;
+	padding: 0;
+}
+
+img {
+	max-width: 100%;
+	height: auto;
+}
+
+/* Estilos do cabeçalho */
+header {
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	padding: 20px;
+	background-color:  var(--white);;
+}
+.logo {
+    flex: 1;
+    text-align: center;
+}
+
+.logo img {
+	height: 40px;
+}
+
+nav ul {
+	display: flex;
+	justify-content: center;
+}
+
+nav li {
+	margin: 0 10px;
+}
+
+nav a {
+	text-decoration: none;
+	color: var(--segundaria);
+}
+
+/* Estilos das seções */
+section {
+	padding: 40px;
+	
+}
+
+.container{
+    display: flex;
+    max-width: 1000px;
+    margin: 0 auto;
+}
+
+h2 {
+	margin-bottom: 20px;
+}
+
+.bio{
+    flex: 1;
+    position: relative;
+}
+
+.content{
+    height: 50px;
+    /* Centralizar na vertical */
+    position: absolute;
+}
+
+.image{
+    flex: 1;
+    text-align: center;
+}
+
+.image > img {
+    width: 50%;
+}
+
+/* Quem Sou */
+.quem-somos {
+    background-color: black;
+    color: var(--white);
+}
+
+.image-simple{
+    flex: 1;
+}
+
+.description{
+    flex: 1;
+    margin: 1%;
+}
+
+/* Estilos da seção de conhecimentos */
+.knowledge-images {
+	display: flex;
+	justify-content: center;
+	/* Defina o espaço entre as linhas e entre as colunas */
+    gap: 20px;
+}
+
+.knowledge-images img {
+	width: 200px;
+	height: 200px;
+	object-fit: cover;
+}
+
+/* Estilos da seção de projetos */
+.projetos{
+    background-color: var(--segundaria);
+    color: var(--white);
+}
+
+.project-images {
+	display: flex;
+	flex-direction: row;
+	align-items: center;
+	/* Defina o espaço entre as linhas e entre as colunas */
+    gap: 20px;
+}
+
+.project-images img {
+	width: 400px;
+	height: 400px;
+	object-fit: cover;
+}
+
+/* Estilos da seção de contatos */
+.contatos {
+    background-color: var(--white);
+}
+
+.contact-block {
+    flex: 1;
+	display: flex;
+	align-items: center;
+	/* Defina o espaço entre as linhas e entre as colunas */
+    gap: 10px;
+}
+
+.contact-block img {
+	width: 150px;
+	height: 150px;
+	object-fit: cover;
+}
+
+/* Estilos para layouts lado a lado */
+.section-grid {
+	display: flex;
+	/* Defina o espaço entre as linhas e entre as colunas */
+    gap: 20px;
+}
+
+.section-grid > * {
+	flex: 1;
+}
+
+footer {
+    background-color: var(--segundaria);
+    color: var(--white);
+    padding: 10px;
+    text-align: center;
+}

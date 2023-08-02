@@ -1,0 +1,113 @@
+:root {
+    --primary: #5271fe;
+    --secondary: #7c93fb;
+    --tertiary: #b7c4fe;
+    --dark-blue: #1c2656;
+    --dark: #000;
+    --dark-secondary: #333;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+/* add tag's */
+
+body {
+    background-color: var(--dark-secondary);
+    /* não recomendo */
+    display: grid;
+    gap: 1em;
+    padding: 2em;
+}
+
+header {
+    /* padding: 2em; */
+}
+
+main {
+    /* padding: 2em; */
+}
+
+footer {
+    /* padding: 2em; */
+}
+
+aside {
+    background-color: var(--secondary);
+    border-radius: 1em;
+    padding: 2em;
+}
+
+article {
+    background-color: var(--secondary);
+    border-radius: 1em;
+    padding: 2em;
+}
+
+
+
+/* add class */
+
+.container{
+    background-color: var(--primary);
+    border-radius: 1em;
+    padding: 2em;
+}
+
+.main-body section {
+    background-color: var(--tertiary);
+    border-radius: 1em;
+    padding: 2em;
+}
+
+.infor{
+    background-color: var(--secondary);
+    border-radius: 1em;
+    padding: 2em;
+    height: 50vh;
+}
+
+.main-body {
+    height: 100vh;
+}
+
+.flex{
+    display: flex;
+    /* criar uma class */
+    gap: 2em;
+}
+
+.grid{
+    display: grid;
+    /* criar uma class */
+    gap: 2em;
+}
+
+.flex-wrap {
+    flex-wrap: wrap;
+}
+
+.flex-1 {
+    flex: 1;
+}
+
+.flex-2 {
+    flex: 2;
+}
+
+.container-sub{
+    border-radius: 1em;
+    padding: 2em;
+    display: grid;
+    /* criar uma class */
+    gap: 2em;
+}
+
+.padding-4 {
+    padding: 4em;
+}
+
+
+

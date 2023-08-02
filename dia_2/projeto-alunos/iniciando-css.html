@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <!-- Com tag style definido dentro da head com seus respectivas referencias -->
+    <style type="text/css">
+        p {
+            font-size: 70px;
+        }
+        /* outro momento */
+        ul {
+            list-style-type: square; /* Altera o estilo dos marcadores para quadrados */
+            padding-left: 20px; /* Adiciona um recuo à esquerda */
+        }
+        
+        li {
+            color: blue; /* Altera a cor do texto dos itens */
+        }
+
+    </style>
+
+    <!-- Adicionando com um arquivo externo utilizando um tag chamada link -->
+    <link rel="stylesheet" href="./css/estilos.css">
+
+</head>
+<!-- 
+    Adicionar estilo via propriedade na tag's como style.
+ -->
+<body id="body-id" class="body-class">
+    <p  id="meu-primeiro-id" class="minha-primeira-class" style="color: red;">Teste</p>
+    <br>
+    <p id="meu-primeiro-id" class="minha-primeira-class" >Teste 2 </p>
+    <br>
+    <button style="padding: 20px;"> botão </button>
+
+    <br>
+    <!-- ul -->
+    <ul>
+        <li>Item 1</li>
+        <li>Item 2</li>
+        <li>Item 3</li>
+    </ul>
+
+    <br>
+
+    <!-- Seletores por atributo -->
+    <a title="teste">titulo</a> 
+    <br>
+
+    <a title="teste" href="https://example.org" >titulo</a> 
+    <br>
+
+    <a title="teste" href="https://example2.org" >titulo</a> 
+    <br>
+
+    <a title="teste" href="https://example.org.br" >titulo</a> 
+    <br>
+
+    <!-- Seletores filho -->
+    <div>
+        <strong>Texto um</strong>
+        <p><strong>Texto dois</strong></p>
+    </div>
+
+    <br>
+    <!-- Seletores irmãos adjacentes -->
+    <!-- 
+        <div>:  em HTML é uma das tags mais versáteis e amplamente usadas. Ela é conhecida como uma tag de "divisão"
+        ou
+        "contêiner" e é usada para criar seções ou grupos de elementos dentro de um documento HTML.
+    -->
+    <div>
+        <p>Parágrafo um</p>
+        <p>Parágrafo dois</p>
+    </div>
+
+    <!-- em, px, % -->
+    <!-- Tamanho da fonte do elemento filho = Tamanho da fonte do elemento pai * valor do em  -->
+    <div id="pai">
+        <!-- Tamanho da fonte do elemento filho = 16px * 1.2 = 19.2px  -->
+        <p id="filho">Texto de exemplo</p>
+    </div>
+
+</body>
+
+</html>
