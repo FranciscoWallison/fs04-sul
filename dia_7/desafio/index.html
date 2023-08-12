@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+    <script>
+        function verificarTriangulo(a, b, c) {
+            if (a <= 0 || b <= 0 || c <= 0) {
+                return "Os lados do triângulo devem ter comprimentos positivos.";
+            }
+
+            if (a + b <= c || a + c <= b || b + c <= a) {
+                return "Esses lados não formam um triângulo válido.";
+            }
+
+            if (a === b && b === c) {
+                return "Triângulo equilátero: todos os lados são iguais.";
+            } else if (a === b || a === c || b === c) {
+                return "Triângulo isósceles: dois lados são iguais.";
+            } else {
+                return "Triângulo escaleno: todos os lados são diferentes.";
+            }
+        }
+
+        // Inserir os comprimentos dos lados aqui
+        const ladoA = 1;
+        const ladoB = 1;
+        const ladoC = 1;
+
+        const resultado = verificarTriangulo(ladoA, ladoB, ladoC);
+        console.log(resultado);
+
+    </script>
+</body>
+
+</html>
