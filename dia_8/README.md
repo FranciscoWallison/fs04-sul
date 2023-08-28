@@ -1,12 +1,11 @@
-
-### Pilha
+### Fila 
 ````
 pop(): Remove o último elemento de um array e retorna esse elemento.
 ````
 ````
 push(): Adiciona um ou mais elementos ao final de um array e retorna o novo comprimento do array.
 ````
-### Fila
+### Pilh
 ````
 shift(): Remove o primeiro elemento de um array e retorna esse elemento. Os índices dos elementos restantes são atualizados.
 ````
