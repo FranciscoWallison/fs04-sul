@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+    <script>
+        // passe um numero
+        let x = 0;
+        const y = 2;
+        const z = x % y;
+        const rest = z;
+
+        // Exemplo 1
+        // if (rest === 1) {
+        //     console.log("Impar!");
+        // }
+        
+        // if (rest === 0) {
+        //     console.log("Par!");
+        // }
+
+        // Exemplo 2
+        // if (rest === 1) {
+        //     console.log("Impar!");
+        // } else {
+        //     console.log("Par!");
+        // }
+
+        // Exemplo 3
+        // if (rest === 1) {
+        //     console.log("Impar!");
+        // } else if (rest === 0){
+        //     console.log("Par!");
+        // }
+
+        // Exemplo 4
+        if (rest === 1) {
+            console.log(`Numero ${x} é Impar!`);
+        } 
+        if (rest === 0){
+            console.log(`Numero ${x} é Par!`);
+        }
+        if (rest !== 1 && rest !== 0){
+            console.log("Numero invalido!");
+        }
+
+    </script>
+</body>
+</html>

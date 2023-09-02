@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+    <script>
+        // Objetivo: Escrever uma lógica que soma 
+        // todos os elementos de um array de números inteiros.
+        const array = [1, 2, 3, "100", 1200, -15, 300, "Olá Mundo", 5, 7];
+
+        let soma = 0;
+
+        let array_tratado = [];
+        let array_erros = [];
+
+        for (let index = 0; index < array.length; index++) {
+            const element = array[index];
+
+            // Somente numero inteiros.
+            if (typeof element === "number" && element > 0) {
+                // soma todos os elementos
+                soma = element + soma;
+                array_tratado.push(element);
+            }else{
+                array_erros.push(element);
+            }
+            
+            console.log(soma);
+        }
+
+        console.log(array_tratado);
+        console.log(array_erros);
+
+    </script>
+</body>
+</html>

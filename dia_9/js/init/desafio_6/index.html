@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+    <script>
+
+        // Utilizando uma logica de loop mostre as informações do array
+        const array_conteudo = ["francisco wallison", "franciscowallison@gmail.com", 28];
+
+        console.log(`Nome: ${array_conteudo[0]}`);
+
+        console.log(`Tamanho do array: ${array_conteudo.length}`)
+        console.log("============= For =============")
+        // For
+        for (let i = 0; i < array_conteudo.length; i++) {
+            console.log(`Valor ${i} contem a informação ${array_conteudo[i]}`)
+        }
+        
+        console.log("============= while =============")
+        // While
+        let contador = 0;
+
+        while (contador < array_conteudo.length) {
+            console.log(`Valor ${contador} contem a informação ${array_conteudo[contador]}`);
+            contador++;
+        }
+
+
+    </script>
+</body>
+</html>
