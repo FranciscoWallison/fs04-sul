@@ -1,4 +1,6 @@
-linke da aula 2/9/2023 https://meet.jit.si/digital-college
+linke da aula 2/9/2023
+
+https://meet.jit.si/digital-college
 
 
 # fs04-sul
