@@ -145,4 +145,72 @@ const [lados, perimetro] = useQuadrado;
 console.log(lados);
 console.log(perimetro(10));
 
+
+// UM POUCO DE CLASS e analisando objetos
+
+// Classe Pai: Animal
+function Animal(nome, idade) {
+  this.nome = nome;
+  this.idade = idade;
+}
+
+// Método da classe Pai
+Animal.prototype.dizerInfo = function() {
+  console.log(`Eu sou ${this.nome} e tenho ${this.idade} anos de idade.`);
+};
+
+// Classe Filha: Cachorro
+function Cachorro(nome, idade, raca) {
+  // Chame o construtor da classe Pai com 'call' para herdar seus atributos
+  Animal.call(this, nome, idade);
+  this.raca = raca;
+}
+
+// Estabeleça a herança prototípica da classe Pai para a classe Filha
+Cachorro.prototype = Object.create(Animal.prototype);
+
+// Método específico da classe Filha
+Cachorro.prototype.latir = function() {
+  console.log('Au au!');
+};
+
+// Crie objetos da classe Animal e Cachorro
+var animal = new Animal("Animal Genérico", 3);
+var cachorro = new Cachorro("Rex", 2, "Labrador");
+
+// Use os métodos das classes
+animal.dizerInfo(); // Saída: Eu sou Animal Genérico e tenho 3 anos de idade.
+cachorro.dizerInfo(); // Saída: Eu sou Rex e tenho 2 anos de idade.
+cachorro.latir(); // Saída: Au au!
+```
+
+[Ferramentas sobre DOM: introdução](https://chrome.google.com/webstore/detail/html-tree-generator/dlbbmhhaadfnbbdnjalilhdakfmiffeg)
+
+
+### Document
+
+    Para caminha os objetos se utiliza os pontos.
+    Manipulando o DOM
+
+```js
+
+// Pegar o primeiro elemento filho
+const HTML = document.firstElementChild
+
+// Pegar o primeiro elemento filho do filho
+const HEAD = document.firstElementChild.firstElementChild
+
+// Pegar o ultimo elemento filho
+const BODY = document.lastElementChild
+// Pegar o ultimo elemento filho e pegando o primeiro filho
+const BODY_FIRST_FILHO = document.lastElementChild.firstElementChild
+
+// internoHTML = atribuir um texto
+
+// hender.style.color = 'red'
+
+
+// Os methodos para pegar informações mais rapido
+document.querySelector('input')
+
 ````
