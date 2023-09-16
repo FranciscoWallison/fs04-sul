@@ -209,8 +209,35 @@ const BODY_FIRST_FILHO = document.lastElementChild.firstElementChild
 
 // hender.style.color = 'red'
 
-
 // Os methodos para pegar informações mais rapido
 document.querySelector('input')
+
+// Class
+document.getElementsByClassName("vermelho teste");
+
+var elementosTeste = document.getElementsByClassName("teste");
+var divsTeste = Array.prototype.filter.call(
+  elementosTeste,
+  function (elementoTeste) {
+    return elementoTeste.nodeName === "DIV";
+  },
+);
+
+// Name
+let elements = document.getElementsByName("fname");
+document.getElementById("demo").innerHTML = elements[0].tagName;
+
+// Identificador Unico
+const INPUT_CEP = document.getElementById('cep');
+
+// Consulta
+function getEndereco(cep) {
+
+ const enderecoDados = fetch(`https://viacep.com.br/ws/${cep}/json/`)
+   .then(response => response.json())
+   .then(data => console.log(data.name))
+   .catch(error => console.log(error))
+   .finally(() => /*{ aviso de fim de carregamento }*/)
+}
 
 ````
