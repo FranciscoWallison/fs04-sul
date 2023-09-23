@@ -213,4 +213,50 @@ const BODY_FIRST_FILHO = document.lastElementChild.firstElementChild
 // Os methodos para pegar informações mais rapido
 document.querySelector('input')
 
+```
+
+### Promise
+
 ````
+  Em JavaScript, async, await e Promise são recursos usados para trabalhar com operações assíncronas. Eles são especialmente úteis quando você precisa lidar com tarefas que levam algum tempo para serem concluídas, como fazer chamadas de rede, ler arquivos ou realizar operações intensivas de CPU, sem bloquear a execução do restante do código.
+````
+
+  Uma Promise é um objeto que representa um valor que pode não estar disponível ainda, mas que será resolvido em algum momento no futuro.
+  Uma Promise tem três estados: pendente (pending), resolvida (fulfilled) e rejeitada (rejected).
+  Você pode criar uma Promise usando o construtor Promise. Ela recebe uma função com dois argumentos, resolve e reject, que são funções que você chama quando a operação assíncrona é concluída com sucesso ou falha, respectivamente.
+
+
+```js
+
+const minhaPromise = new Promise((resolve, reject) => {
+  // Simula uma operação assíncrona que leva algum tempo
+  setTimeout(() => {
+    const sucesso = true;
+    if (sucesso) {
+      resolve('Operação bem-sucedida');
+    } else {
+      reject('Erro na operação');
+    }
+  }, 2000);
+});
+
+
+```
+
+### async/await:
+#### async
+  é uma palavra-chave que é usada para definir uma função como assíncrona. Funções assíncronas retornam Promises automaticamente.
+
+#### await 
+  é usado dentro de funções assíncronas para esperar que uma Promise seja resolvida antes de continuar a execução do código. Ele permite que você escreva código assíncrono de maneira mais síncrona, tornando-o mais legível.
+
+
+
+
+```js
+window.onload = function() {
+    // Seu código JavaScript aqui
+    // Isso será executado após a página ser totalmente carregada
+};
+
+```
