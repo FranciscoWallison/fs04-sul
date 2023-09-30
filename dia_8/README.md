@@ -209,7 +209,6 @@ const BODY_FIRST_FILHO = document.lastElementChild.firstElementChild
 
 // hender.style.color = 'red'
 
-
 // Os methodos para pegar informações mais rapido
 document.querySelector('input')
 
