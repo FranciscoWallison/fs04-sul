@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lista de Clientes</title>
+    <!-- Inclua as bibliotecas do Bootstrap -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css">
+</head>
+
+<body>
+    <div class="container mt-5">
+        <div class="d-flex gap-2 col-12 mb-2">
+            <h1>Lista de Clientes</h1>
+
+            <button class="btn btn-primary" type="button" onclick="consutlar()"></button>
+        </div>
+
+
+        <!-- Barra de Pesquisa -->
+        <div class="input-group mb-3">
+            <input type="text" class="form-control" placeholder="Pesquisar clientes" aria-label="Pesquisar clientes"
+                aria-describedby="button-search">
+            <button class="btn btn-outline-primary" type="button" id="button-search"
+                onclick="consutlar()">Pesquisar</button>
+        </div>
+
+        <!-- Tabela de Clientes -->
+        <table class="table table-bordered">
+            <thead>
+                <tr>
+                    <th>#</th>
+                    <th>Name</th>
+                    <th>Email</th>
+                    <th>Endereço</th>
+                    <th>Cidade</th>
+                    <th>Estado</th>
+                    <th>CEP</th>
+                    <th>Phone Number</th>
+                    <th>Ações</th>
+                </tr>
+            </thead>
+            <tbody id="ifor_clientes">
+                <!-- Exemplo de linha da tabela (você pode adicionar mais linhas dinamicamente com JavaScript) -->
+
+                <!-- <tr>
+                    <td>Nome do Cliente</td>
+                    <td>cliente@email.com</td>
+                    <td>Endereço do Cliente</td>
+                    <td>Cidade do Cliente</td>
+                    <td>Estado do Cliente</td>
+                    <td>12345</td>
+                    <td>(123) 456-7890</td>
+                    <td>
+                        <button class="btn btn-warning btn-sm">Editar</button>
+                        <button class="btn btn-danger btn-sm">Deletar</button>
+                    </td>
+                </tr> -->
+
+            </tbody>
+        </table>
+    </div>
+
+    <!-- Modal Deletar -->
+    <div class="modal fade" id="staticBackdrop" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1"
+        aria-labelledby="staticBackdropLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h1 class="modal-title fs-5" id="staticBackdropLabel">Modal title</h1>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    ...
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                    <button type="button" class="btn btn-primary">Understood</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+
+    <script src="./script.js"></script>
+</body>
+
+</html>
