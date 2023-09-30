@@ -28,15 +28,13 @@ window.clientes = fazerRequisicao();
 
 consutlar = async () => {
   // consultar
-
   const termoDeBusca = "Tonya Ritchie"; // O termo que você quer buscar
 
-  console.log("cliente: ",  await window.clientes);
+  console.log("cliente: ", await window.clientes);
 
   let data = await window.clientes;
 
-  const resultadosFiltrados =  data.filter((cliente) => {
-    console.log("cliente.name.toLowerCase(): ", cliente.name.toLowerCase());
+  const resultadosFiltrados = data.filter((cliente) => {
     // Use a função toLowerCase() para tornar a busca case-insensitive
     return cliente.name.toLowerCase().includes(termoDeBusca.toLowerCase());
   });
@@ -44,7 +42,6 @@ consutlar = async () => {
   window.clientes = resultadosFiltrados;
   await add_table();
 };
-
 
 const add_table = async () => {
   let dados_cliente = ``;
@@ -56,19 +53,23 @@ const add_table = async () => {
         <tr>
           <td>${i + 1}</td>
           <td>${cliente.name}</td>
-          <td>${cliente.email}</td>
+          <td id="email-${i + 1}">${cliente.email}</td>
           <td>${cliente.address}</td>
           <td>${cliente.city}</td>
           <td>${cliente.state}</td>
           <td>${cliente.cep}</td>
           <td>${cliente.phoneNumber}</td>
-          <td>
-              <button id="edit-${
+          <td class="d-flex gap-3">
+              <button 
+                data-bs-target="#staticBackdrop"
+              id="edit-${
                 i + 1
-              }" class="btn btn-warning btn-sm" onclick="editar()" >Editar</button>
-              <button id="delete-${
+              }" class="btn btn-warning btn-sm" onclick="editar(this)" >Editar</button>
+              <button 
+                data-bs-target="#staticBackdrop"
+              id="delete-${
                 i + 1
-              }" class="btn btn-danger btn-sm" onclick="deletar()" >Deletar</button>
+              }" class="btn btn-danger btn-sm" onclick="deletar(this)" >Deletar</button>
           </td>
         </tr>    
       `;
@@ -81,6 +82,16 @@ const add_table = async () => {
 };
 
 add_table();
+
+function deletar(e) {
+  const { id } = e;
+  const id_element = id.split("delete-")[1];
+  const index = document.getElementById(`email-${id_element}`)
+  
+  console.log("deletar: ", index.innerHTML);
+  var meuModal = new bootstrap.Modal(document.getElementById("staticBackdrop"));
+  meuModal.show();
+}
 
 // deletar
 const arrayDeObjetos_deletar = [
