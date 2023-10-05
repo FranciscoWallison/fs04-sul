@@ -212,6 +212,9 @@ const BODY_FIRST_FILHO = document.lastElementChild.firstElementChild
 // Os methodos para pegar informações mais rapido
 document.querySelector('input')
 
+// validae evento de click
+document.getElementById("fechar").click();
+
 ```
 
 ### Promise
