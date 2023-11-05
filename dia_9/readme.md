@@ -13,6 +13,14 @@ propenso a erros.
 ```
 
 
+## Hooks
+````
+    Eles permitem que você use estados, efeitos, contexto e outras funcionalidades do 
+ React em componentes funcionais, antes disponíveis apenas em componentes de classe.
+ Os hooks são funções que permitem "ligar-se" a recursos do React em componentes funcionais,
+ fornecendo um modo mais simples e eficaz de gerenciar o estado e o ciclo de vida dos componentes.
+````
+
 ## State e Props:
 #### State:
 ```
@@ -32,3 +40,21 @@ As props são somente leitura e ajudam a tornar os componentes mais reutilizáve
 As props são passadas para um componente como atributos no momento em que são utilizados. Esses valores podem ser acessados
 pelo componente filho através do objeto props.
 ```
+
+
+### Adicionando Bootstrap no projeto
+```` 
+npm install bootstrap
+```` 
+
+### Exemplo no index.js
+
+```` 
+...
+import './index.css'; // Seu arquivo CSS local, se houver
+import App from './App';
+import 'bootstrap/dist/css/bootstrap.min.css'; // Importando o CSS do Bootstrap
+
+....
+
+```` 
