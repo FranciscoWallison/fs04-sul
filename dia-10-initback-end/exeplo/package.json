@@ -1,0 +1,15 @@
+{
+  "name": "exemplo",
+  "version": "1.0.0",
+  "description": "testedeapi",
+  "main": "index.js",
+  "scripts": {
+    "test": "\"\"",
+    "start": "node index.js"
+  },
+  "author": "franciscowallison",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^4.18.2"
+  }
+}

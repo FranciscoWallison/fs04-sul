@@ -1,0 +1,14 @@
+{
+  "name": "teste",
+  "version": "1.0.0",
+  "description": "exemplo-back-end",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"\"\u001b[Dola muundo!\"\u001b[D\u001b[D\u001b[D\u001b[D\u001b[\u001b[\u001b[C\u001b[C\u001b[mundo!\u001b[C\u001b[!\""
+  },
+  "author": "francisco wallison",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^4.18.2"
+  }
+}
