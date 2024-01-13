@@ -1,18 +1,14 @@
-const express = require('express')
-const app = express()
-const cors = require('cors')
-app.use(cors())
-const port = 3000
+const express = require("express");
+const app = express();
+const cors = require("cors");
+const server = require("./server");
 
-// Rotas
-const produtosRouter = require('./routes/produtos')
-
+app.use(cors());
 app.use(express.json());
 
-// Prefixo da rota de /produtos
-app.use('/produtos', produtosRouter);
+// Configurações adicionais do Express aqui
 
-
-app.listen(port, () => {
-    console.log(`Example app listening on port ${port}`)
+const port = process.env.PORT || 3000;
+server.listen(port, () => {
+  console.log(`Servidor Express iniciado na porta ${port}`);
 });

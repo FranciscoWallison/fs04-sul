@@ -1,0 +1,16 @@
+version: '3'
+
+services:
+  mariadb:
+    image: mariadb:11.3-rc
+    container_name: meu-mariadb
+    restart: always
+    environment:
+      MYSQL_ROOT_PASSWORD: sua-senha-root
+      MYSQL_DATABASE: seu-banco-de-dados
+      MYSQL_USER: seu-usuario
+      MYSQL_PASSWORD: sua-senha-usuario
+    ports:
+      - "3306:3306"
+    volumes:
+      - ./data:/var/lib/mysql

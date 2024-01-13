@@ -1,5 +1,6 @@
 const express = require("express");
 const router = express.Router();
+const { getProdutos } = require('../repository/produtos-repository');
 
 const listaDeProdutos = [
   {
@@ -19,8 +20,8 @@ const listaDeProdutos = [
 //  --url http://localhost:3000/produtos \
 //  --header 'User-Agent: insomnia/8.2.0'
 router.get("/", async (req, res) => {
-  //   res.json(await getAlunos());
-  res.json(listaDeProdutos);
+  res.json(await getProdutos());
+  // res.json(listaDeProdutos);
 });
 
 

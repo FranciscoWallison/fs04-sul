@@ -1,0 +1,27 @@
+{
+  "development": {
+    "dialect": "sqlite",
+    "storage": "database-test.sqlite",
+    "define": {
+        "underscored": true,
+        "createdAt": "created_at",
+        "updatedAt": "updated_at"
+    }
+  },
+  "test": {
+    "dialect": "sqlite",
+    "storage": "database-test.sqlite",
+    "define": {
+        "underscored": true,
+        "createdAt": "created_at",
+        "updatedAt": "updated_at"
+    }
+  },
+  "production": {
+    "username": "root",
+    "password": null,
+    "database": "database_production",
+    "host": "127.0.0.1",
+    "dialect": "mysql"
+  }
+}
