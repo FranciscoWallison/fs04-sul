@@ -48,22 +48,30 @@ CREATE TABLE produto (
 ________________________________
 0 - Inserir um novo produto:
 ````
-INSERT INTO produto (nome, preco) VALUES ('Nome do Produto', 10.99);
+INSERT INTO Produtos (nome, preco) VALUES ('Nome do Produto', 10.99);
 ````
 1 - Selecionar todos os produtos:
 ````
-SELECT * FROM produto;
+SELECT * FROM Produtos;
 ````
 2 - Selecionar um produto específico por ID:
  ````
-SELECT * FROM produto WHERE id = 1;
+SELECT * FROM Produtos WHERE id = 1;
 ````
 3 - Atualizar um produto existente:
 ````
-UPDATE produto SET nome = 'Novo Nome', preco = 15.99 WHERE id = 1;
+UPDATE Produtos SET nome = 'Novo Nome', preco = 15.99 WHERE id = 1;
 ````
 4 - Excluir um produto:
 ````
-DELETE FROM produto WHERE id = 1;
+DELETE FROM Produtos WHERE id = 1;
+````
+5 - Criando uma nova coluna em uma tabela:
+````
+ALTER TABLE Produtos ADD img VARCHAR(255);
+````
+6 - Removendo coluna da tabela
+````
+ALTER TABLE Produtos DROP COLUMN img;
 ````
 
