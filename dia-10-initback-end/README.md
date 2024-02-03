@@ -23,18 +23,119 @@ npx typeorm migration:run
 
 Sequelize
 ````
-npx sequelize-cli init --dir src
-
+npx sequelize-cli init
 ````
-
 ````
 npx sequelize-cli model:generate --name Produto --attributes nome:string,preco:float
 ````
 ````
 npx sequelize-cli db:migrate
 ````
+Novas colunas de produtos
+````
+descricao: {
+    type: DataTypes.TEXT,
+  },
+  quantidade_estoque: {
+    type: DataTypes.INTEGER,
+    allowNull: false,
+  },
+  categoria_id: {
+    type: DataTypes.INTEGER,
+    allowNull: false,
+  },
+````
 
+Adicionando uma coluna a uma tabela
+````
+queryInterface.addColumn('Produtos', 'img', { type: DataTypes.STRING });
+````
+Removendo uma coluna
+````
+queryInterface.removeColumn('Produtos', 'img');
+````
+Adicionando uma coluna a uma tabela
+````
+queryInterface.addColumn('Produtos', 'quantidade_estoque', { type: DataTypes.INTEGER });
+````
+Removendo uma coluna
+````
+queryInterface.removeColumn('Produtos', 'quantidade_estoque');
+````
+Adicionando uma coluna a uma tabela
+````
+queryInterface.addColumn('Produtos', 'categoria_id', { type: DataTypes.INTEGER });
+````
+Removendo uma coluna
+````
+queryInterface.removeColumn('Produtos', 'categoria_id');
+````
+ 
+Criando tabela categoria:
+````
+const Categoria = sequelize.define('Categorias', {
+  categoria_id: {
+    type: DataTypes.INTEGER,
+    primaryKey: true,
+    autoIncrement: true,
+  },
+  nome_categoria: {
+    type: DataTypes.STRING,
+    allowNull: false,
+  },
+});
+````
 
+Criando tabela Pedidos:
+````
+const Pedido = sequelize.define('Pedidos', {
+  pedido_id: {
+    type: DataTypes.INTEGER,
+    primaryKey: true,
+    autoIncrement: true,
+  },
+  cliente_id: {
+    type: DataTypes.INTEGER,
+    allowNull: false,
+  },
+  data_pedido: {
+    type: DataTypes.DATE,
+    defaultValue: DataTypes.NOW,
+  },
+  status: {
+    type: DataTypes.STRING,
+    allowNull: false,
+    defaultValue: 'pendente', // Pode ser "pendente", "processando", "enviado", etc.
+  },
+});
+````
+
+Criando tabela ItemPedido:
+````
+const ItemPedido = sequelize.define('ItemPedido', {
+  item_id: {
+    type: DataTypes.INTEGER,
+    primaryKey: true,
+    autoIncrement: true,
+  },
+  pedido_id: {
+    type: DataTypes.INTEGER,
+    allowNull: false,
+  },
+  produto_id: {
+    type: DataTypes.INTEGER,
+    allowNull: false,
+  },
+  quantidade: {
+    type: DataTypes.INTEGER,
+    allowNull: false,
+  },
+  preco_unitario: {
+    type: DataTypes.FLOAT,
+    allowNull: false,
+  },
+});
+````
 
 ### Comando SQL
 1 - CRIAR A TABELA
