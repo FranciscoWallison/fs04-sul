@@ -178,6 +178,9 @@ ALTER TABLE Produtos DROP COLUMN img;
 
 
 
+
+#### Modelo ItemPedido:
+De muitos para muitos 
 ```js
 'use strict';
 const {
