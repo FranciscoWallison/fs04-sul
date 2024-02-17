@@ -181,6 +181,7 @@ ALTER TABLE Produtos DROP COLUMN img;
 
 #### Modelo ItemPedido:
 De muitos para muitos 
+No exemplo do modelo ItemPedido, belongsTo é usado para indicar que um item de pedido pertence a um pedido e a um produto. Isso é feito através das chaves estrangeiras id_pedido e id_produto.
 ```js
 'use strict';
 const {
@@ -219,6 +220,9 @@ module.exports = (sequelize, DataTypes) => {
 
 #### Modelo Pedido:
 De um para um 
+
+No exemplo do modelo Pedido, hasMany é usado para indicar que um pedido pode ter muitos itens associados a ele. Cada item de pedido tem uma chave estrangeira id_pedido que faz referência ao id do pedido pai.
+
 ```js
 'use strict';
 const { Model } = require('sequelize');
