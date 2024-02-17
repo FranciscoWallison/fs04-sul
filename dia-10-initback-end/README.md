@@ -221,9 +221,8 @@ module.exports = (sequelize, DataTypes) => {
 De um para um 
 ```js
 'use strict';
-const {
-  Model
-} = require('sequelize');
+const { Model } = require('sequelize');
+
 module.exports = (sequelize, DataTypes) => {
   class Pedido extends Model {
     static associate(models) {
@@ -232,11 +231,18 @@ module.exports = (sequelize, DataTypes) => {
         foreignKey: 'id_pedido',
         as: 'itens',
       });
+
+      // Define association with Usuário
+      Pedido.belongsTo(models.Usuario, {
+        foreignKey: 'id_usuario',
+        as: 'usuario',
+      });
     }
   }
 
   Pedido.init({
     // ... outros campos do modelo Pedido
+    id_usuario: DataTypes.INTEGER, // Adiciona o campo de chave estrangeira para usuário
   }, {
     sequelize,
     modelName: 'Pedido',
@@ -273,4 +279,33 @@ module.exports = (sequelize, DataTypes) => {
 
   return Produto;
 };
+```
+
+#### Modelo Usuario:
+De um para muitos
+```js
+'use strict';
+const { Model } = require('sequelize');
+
+module.exports = (sequelize, DataTypes) => {
+  class Usuario extends Model {
+    static associate(models) {
+      // Define association with Pedido
+      Usuario.hasMany(models.Pedido, {
+        foreignKey: 'id_usuario',
+        as: 'pedidos',
+      });
+    }
+  }
+
+  Usuario.init({
+    // ... outros campos do modelo Usuario
+  }, {
+    sequelize,
+    modelName: 'Usuario',
+  });
+
+  return Usuario;
+};
+
 ```
