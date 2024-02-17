@@ -213,3 +213,61 @@ module.exports = (sequelize, DataTypes) => {
   return ItemPedido;
 };
 ```
+
+#### Modelo Pedido:
+De um para um 
+```js
+'use strict';
+const {
+  Model
+} = require('sequelize');
+module.exports = (sequelize, DataTypes) => {
+  class Pedido extends Model {
+    static associate(models) {
+      // Define association with ItemPedido
+      Pedido.hasMany(models.ItemPedido, {
+        foreignKey: 'id_pedido',
+        as: 'itens',
+      });
+    }
+  }
+
+  Pedido.init({
+    // ... outros campos do modelo Pedido
+  }, {
+    sequelize,
+    modelName: 'Pedido',
+  });
+
+  return Pedido;
+};
+```
+
+#### Modelo Produto:
+De um para um 
+```js
+'use strict';
+const {
+  Model
+} = require('sequelize');
+module.exports = (sequelize, DataTypes) => {
+  class Produto extends Model {
+    static associate(models) {
+      // Define association with ItemPedido
+      Produto.hasMany(models.ItemPedido, {
+        foreignKey: 'id_produto',
+        as: 'itens',
+      });
+    }
+  }
+
+  Produto.init({
+    // ... outros campos do modelo Produto
+  }, {
+    sequelize,
+    modelName: 'Produto',
+  });
+
+  return Produto;
+};
+```
