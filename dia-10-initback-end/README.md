@@ -176,3 +176,40 @@ ALTER TABLE Produtos ADD img VARCHAR(255);
 ALTER TABLE Produtos DROP COLUMN img;
 ````
 
+
+
+```js
+'use strict';
+const {
+  Model
+} = require('sequelize');
+module.exports = (sequelize, DataTypes) => {
+  class ItemPedido extends Model {
+    static associate(models) {
+      // Define association with Pedido
+      ItemPedido.belongsTo(models.Pedido, {
+        foreignKey: 'id_pedido',
+        as: 'pedido',
+      });
+
+      // Define association with Produto
+      ItemPedido.belongsTo(models.Produto, {
+        foreignKey: 'id_produto',
+        as: 'produto',
+      });
+    }
+  }
+
+  ItemPedido.init({
+    id_pedido: DataTypes.INTEGER,
+    id_produto: DataTypes.INTEGER,
+    quantidade: DataTypes.INTEGER,
+    preco_unitario: DataTypes.FLOAT
+  }, {
+    sequelize,
+    modelName: 'ItemPedido',
+  });
+
+  return ItemPedido;
+};
+```
