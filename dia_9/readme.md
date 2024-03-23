@@ -58,8 +58,6 @@ import 'bootstrap/dist/css/bootstrap.min.css'; // Importando o CSS do Bootstrap
 ....
 
 ```` 
-
-
 Explicando:
 Codificação (Encoding)
 ````
@@ -90,8 +88,36 @@ Parte 2 (Payload): eyJ1c2VybmFtZSI6ImFkbWluIiwiaWF0IjoxNTE2MjM5MDIyfQ
 Parte 3 (Signature): SflKxwRJSMeKKF2QT4fwpMeJf36POk6yJV_adQssw5c
 ````
 
-Exemplo de token :
+exemplo de javascript: 
+````
+const jwt = require('jsonwebtoken');
 
+// Definindo um segredo para assinar o token (deve ser mantido em segredo na produção)
+const segredo = 'meuSegredoSuperSecreto';
+
+// Dados do usuário para incluir no token
+const usuario = {
+  id: 1,
+  nome: 'João da Silva',
+  email: 'joao@example.com'
+};
+
+// Criar um token JWT
+const token = jwt.sign(usuario, segredo, { expiresIn: '1h' });
+
+console.log('Token JWT:', token);
+
+// Verificar o token JWT
+jwt.verify(token, segredo, (err, decoded) => {
+  if (err) {
+    console.error('Erro ao verificar o token:', err);
+  } else {
+    console.log('Token decodificado:', decoded);
+  }
+});
+````
+
+Exemplo de token :
 ```js
 const express = require('express');
 const jwt = require('jsonwebtoken');
@@ -142,5 +168,6 @@ app.listen(3000, () => {
   console.log('Server is running on port 3000');
 });
 ```
+
 
 
