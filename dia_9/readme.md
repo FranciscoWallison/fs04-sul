@@ -89,7 +89,7 @@ Parte 3 (Signature): SflKxwRJSMeKKF2QT4fwpMeJf36POk6yJV_adQssw5c
 ````
 
 exemplo de javascript: 
-````
+```js
 const jwt = require('jsonwebtoken');
 
 // Definindo um segredo para assinar o token (deve ser mantido em segredo na produção)
