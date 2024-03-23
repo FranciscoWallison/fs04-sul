@@ -169,5 +169,73 @@ app.listen(3000, () => {
 });
 ```
 
+exemplo de refresh 
+
+```js
+const jwt = require('jsonwebtoken');
+
+// Definindo segredos para assinar os tokens (mantenha-os em segredo na produção)
+const segredoTokenAcesso = 'segredoTokenAcesso';
+const segredoRefreshToken = 'segredoRefreshToken';
+
+// Dados do usuário para incluir no token de acesso
+const usuario = {
+  id: 1,
+  nome: 'João da Silva',
+  email: 'joao@example.com'
+};
+
+// Função para gerar um token de acesso
+function gerarTokenAcesso(usuario) {
+  return jwt.sign(usuario, segredoTokenAcesso, { expiresIn: '15m' });
+}
+
+// Função para gerar um refresh token
+function gerarRefreshToken(usuario) {
+  return jwt.sign(usuario, segredoRefreshToken, { expiresIn: '7d' });
+}
+
+// Simulação de login bem-sucedido
+function fazerLogin(req, res) {
+  const accessToken = gerarTokenAcesso(usuario);
+  const refreshToken = gerarRefreshToken(usuario);
+  res.json({ accessToken, refreshToken });
+}
+
+// Endpoint para renovar o token de acesso usando o refresh token
+function renovarToken(req, res) {
+  const { refreshToken } = req.body;
+
+  jwt.verify(refreshToken, segredoRefreshToken, (err, decoded) => {
+    if (err) {
+      return res.sendStatus(403); // Forbidden
+    }
+
+    const accessToken = gerarTokenAcesso(decoded);
+    res.json({ accessToken });
+  });
+}
+
+// Exemplo de uso
+
+// Simulação de um novo login
+fazerLogin({}, {
+  json: (data) => {
+    console.log('Token de Acesso:', data.accessToken);
+    console.log('Refresh Token:', data.refreshToken);
+
+    // Simulação de solicitação para renovar o token de acesso
+    renovarToken({ body: { refreshToken: data.refreshToken } }, {
+      json: (data) => {
+        console.log('Novo Token de Acesso:', data.accessToken);
+      },
+      sendStatus: (status) => {
+        console.log('Erro ao renovar o token:', status);
+      }
+    });
+  }
+});
+```
+
 
 
