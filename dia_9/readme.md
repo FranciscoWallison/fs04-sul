@@ -60,3 +60,87 @@ import 'bootstrap/dist/css/bootstrap.min.css'; // Importando o CSS do Bootstrap
 ```` 
 
 
+Explicando:
+Codificação (Encoding)
+````
+Header (Cabeçalho): O cabeçalho do JWT contém metadados sobre o tipo do token e o algoritmo de hashing usado para assinar o token. 
+Ele é codificado para JSON e então convertido para Base64URL.
+
+Payload (Corpo): O payload contém os dados que você deseja transmitir, como informações sobre o usuário ou autorização. 
+Ele também é codificado para JSON e convertido para Base64URL.
+
+Assinatura (Signature): A assinatura é criada combinando o cabeçalho codificado, o payload codificado, e uma chave 
+secreta (ou chave pública, se estiver usando criptografia assimétrica), usando um algoritmo de hash, como HMACSHA256 
+ou RSA. A assinatura fornece integridade aos dados, garantindo que eles não tenham sido alterados durante a transmissão.
+```` 
+Decodificação (Decoding)
+````
+Validação: O token JWT é dividido em suas partes: cabeçalho, payload e assinatura. Em seguida, 
+o algoritmo de assinatura é usado para verificar se a assinatura é válida, garantindo assim a integridade dos dados.
+
+Base64 Decode: O cabeçalho e o payload, que foram convertidos para Base64URL durante a codificação, 
+são decodificados de volta para JSON.
+
+Utilização: Após a decodificação e validação, o conteúdo do payload pode ser utilizado pela aplicação conforme necessário.
+````
+Exemplo de um JWT
+````
+Parte 1 (Header): eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9
+Parte 2 (Payload): eyJ1c2VybmFtZSI6ImFkbWluIiwiaWF0IjoxNTE2MjM5MDIyfQ
+Parte 3 (Signature): SflKxwRJSMeKKF2QT4fwpMeJf36POk6yJV_adQssw5c
+````
+
+Exemplo de token :
+
+```js
+const express = require('express');
+const jwt = require('jsonwebtoken');
+const bcrypt = require('bcrypt');
+const authenticateJWT = require('./middleware/authenticateJWT');
+
+const app = express();
+app.use(express.json());
+
+const produtosRouter = require('./routes/produtos');
+const usuariosRouter = require('./routes/usuarios');
+const pedidosRouter = require('./routes/pedidos');
+
+const users = [
+  {
+    username: 'user1',
+    password: '$2b$10$EL0V5xJ/hqj/63SwtePth.2msBqNJ57MRr9J3yIzXPKB0ud3xJJJe', // Hashed password of 'password1'
+  },
+];
+
+app.post('/login', (req, res) => {
+  const { username, password } = req.body;
+
+  const user = users.find(u => u.username === username);
+  if (!user) {
+    return res.status(401).json({ message: 'Invalid username or password' });
+  }
+
+  bcrypt.compare(password, user.password, (err, result) => {
+    if (err || !result) {
+      return res.status(401).json({ message: 'Invalid username or password' });
+    }
+
+    const accessToken = jwt.sign({ username: user.username }, 'secret_key');
+    res.json({ accessToken });
+  });
+});
+
+// Middleware para proteger os endpoints
+app.use(authenticateJWT);
+
+// Roteadores protegidos
+app.use("/produtos", produtosRouter);
+app.use("/usuarios", usuariosRouter);
+app.use("/pedidos", pedidosRouter);
+
+app.listen(3000, () => {
+  console.log('Server is running on port 3000');
+});
+```
+
+
